@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 13615390}
   - component: {fileID: 11469404}
   - component: {fileID: 114202059748171330}
+  - component: {fileID: 114433712731888026}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2715,3 +2716,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkMoveStopRadius: 1
   attackMoveStopRadius: 5
+--- !u!114 &114433712731888026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1e5be94d2bf7894087beca756338f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
