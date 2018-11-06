@@ -23,7 +23,7 @@ public class CameraRaycaster : MonoBehaviour
     }
 
     public delegate void OnLayerChange(Layer newLayer);
-    public OnLayerChange layerChangeObservers;
+    public OnLayerChange onLayerChange;
 
     void Start() // TODO Awake?
     {
@@ -43,7 +43,7 @@ public class CameraRaycaster : MonoBehaviour
                 if(layerHit != layer)
                 {
                     layerHit = layer;
-                    layerChangeObservers(layer);
+                    onLayerChange(layer);
                 }
                 else
                 {
@@ -57,6 +57,7 @@ public class CameraRaycaster : MonoBehaviour
         // Otherwise return background hit
         raycastHit.distance = distanceToBackground;
         layerHit = Layer.RaycastEndStop;
+        onLayerChange(layerHit);
     }
 
     RaycastHit? RaycastForLayer(Layer layer)
