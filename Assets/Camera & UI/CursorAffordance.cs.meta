@@ -3,7 +3,10 @@ guid: 4950d079efc0a9846a40b16e19ad8b66
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - walkCursor: {instanceID: 0}
+  - targetCursor: {instanceID: 0}
+  - unknownCursor: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

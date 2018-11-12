@@ -23,23 +23,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Fixed update is called in sync with physics
-    private void FixedUpdate()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            isInDirectMode = !isInDirectMode;
-            currentDestination = transform.position;
-        }
-        if (isInDirectMode)
-        {
-            ProcessDirectMovement();
-        }
-        else
-        {
-            ProcessMouseMovement();
-        }
+    //private void fixedupdate()
+    //{
+    //    if (input.getkeydown(keycode.g))
+    //    {
+    //        isindirectmode = !isindirectmode;
+    //        currentdestination = transform.position;
+    //    }
+    //    if (isindirectmode)
+    //    {
+    //        processdirectmovement();
+    //    }
+    //    else
+    //    {
+    //        processmousemovement();
+    //    }
         
-    }
+    //}
 
     private void ProcessDirectMovement()
     {
@@ -52,30 +52,30 @@ public class PlayerMovement : MonoBehaviour
         thirdPersonCharacter.Move(movement, false, false);
     }
 
-    private void ProcessMouseMovement()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            clickpoint = cameraRaycaster.hit.point;
-            switch (cameraRaycaster.currentLayerHit)
-            {
-                case Layer.Walkable:
-                    currentDestination = ShortDestination(clickpoint, walkMoveStopRadius);  // So not set in default case
-                    break;
+    //private void processmousemovement()
+    //{
+    //    if (input.getmousebutton(0))
+    //    {
+    //        clickpoint = cameraraycaster.hit.point;
+    //        switch (cameraraycaster.currentlayerhit)
+    //        {
+    //            case layer.walkable:
+    //                currentdestination = shortdestination(clickpoint, walkmovestopradius);  // so not set in default case
+    //                break;
 
-                case Layer.Enemy:
-                    currentDestination = ShortDestination(clickpoint, attackMoveStopRadius);
-                    break;
+    //            case layer.enemy:
+    //                currentdestination = shortdestination(clickpoint, attackmovestopradius);
+    //                break;
 
-                default:
-                    print("NOT ALLOWED TO MOVE HERE");
-                    return;
-            }
+    //            default:
+    //                print("not allowed to move here");
+    //                return;
+    //        }
 
-        }
+    //    }
 
-        WalkToDestination();
-    }
+    //    walktodestination();
+    //}
 
     private void WalkToDestination()
     {
