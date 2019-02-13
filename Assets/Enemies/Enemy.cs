@@ -8,7 +8,12 @@ public class Enemy : MonoBehaviour, Idamageable {
 
     [SerializeField] float maxHealthPoints = 100;
     [SerializeField] float attackRadius = 4f;
+
+    [SerializeField] float damagePerShot = 9f;
     [SerializeField] float chaseRadius = 6f;
+
+    [SerializeField] GameObject projectileToUse;
+    [SerializeField] GameObject projectileSocket;
 
     float currentHealthPoints = 100f;
     AICharacterControl aiCharacterControl = null;
@@ -26,6 +31,7 @@ public class Enemy : MonoBehaviour, Idamageable {
         if (distanceToPlayer <= attackRadius)
         {
             print(gameObject.name + "attacking player");
+            SpawnProjectile(); //TODO Slow this down
         }
 
 
@@ -37,6 +43,21 @@ public class Enemy : MonoBehaviour, Idamageable {
         {
             aiCharacterControl.SetTarget(transform);
         }
+    }
+
+    void SpawnProjectile()
+    {
+        GameObject newProjectile = Instantiate(projectileToUse, projectileSocket.transform.position, Quaternion.identity);
+        Projectile projectileComponent = newProjectile.GetComponent<Projectile>();
+        projectileComponent.damageCaused = damagePerShot;
+
+        Vector3 unitVectorToPlayer = (player.transform.position - projectileSocket.transform.position).normalized;
+        float projectileSpeed = projectileComponent.projectileSpeed;
+        newProjectile.GetComponent<Rigidbody>().velocity = unitVectorToPlayer * projectileSpeed;
+
+        print(projectileSpeed);
+        print(unitVectorToPlayer);
+        print(unitVectorToPlayer * projectileSpeed);
     }
 
     public float healthAsPercentage
