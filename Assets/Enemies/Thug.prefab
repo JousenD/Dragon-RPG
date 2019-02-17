@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 114271221360268126}
   - component: {fileID: 114769718874366810}
   m_Layer: 9
-  m_Name: Bruiser
+  m_Name: Thug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
