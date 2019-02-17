@@ -899,9 +899,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyLayer: 9
-  maxHealthPoints: 800
+  maxHealthPoints: 1000
   damagePerHit: 50
-  minTimeBetweenHits: 0.5
+  minTimeBetweenHits: 1
   maxAttackRange: 2
 --- !u!114 &114711991224745478
 MonoBehaviour:
