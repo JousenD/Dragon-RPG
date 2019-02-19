@@ -2607,7 +2607,7 @@ MonoBehaviour:
   damagePerShot: -1000
   chaseRadius: 0.5
   secondBetweenShots: 5
-  projectileToUse: {fileID: 1652549219136770, guid: 7a3bad3ab0be62f419f3e4182b3e55f2,
+  projectileToUse: {fileID: 1652549219136770, guid: 41f147747cff41440af06baac8bf1e75,
     type: 2}
   projectileSocket: {fileID: 1188992745614580}
   aimOffset: {x: 0, y: 1, z: 0}
