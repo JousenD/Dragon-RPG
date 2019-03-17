@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 114218168241999132}
   m_Layer: 5
   m_Name: Game Canvas
-  m_TagString: Untagged
+  m_TagString: Scene Setup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
