@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DominantHand : MonoBehaviour {
+namespace RPG.Characters
+{
+    public class DominantHand : MonoBehaviour
+    {
 
+    }
 }

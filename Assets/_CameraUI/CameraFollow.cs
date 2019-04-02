@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace RPG.CameraUI
+{
 public class CameraFollow : MonoBehaviour {
 
     GameObject player;
@@ -17,4 +19,5 @@ public class CameraFollow : MonoBehaviour {
     {
         transform.position = player.transform.position;
     }
+}
 }
